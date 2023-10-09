@@ -1,0 +1,15 @@
+config:
+  target: "http://localhost:3000"  # Update the URL if your API runs on a different port or host
+
+scenarios:
+  - flow:
+      - post:
+          url: "/reset"
+          json:
+            account: "test_account"
+
+      - post:
+          url: "/charge"
+          json:
+            account: "test_account"
+            charges: 110
